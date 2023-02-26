@@ -1,0 +1,58 @@
++----------------+              +----------------+              +----------------+
+|   BookModel    |              |  EmpruntModel  |              |   UserModel    |
++----------------+              +----------------+              +----------------+
+| id: ObjectId   |              | id: ObjectId   |              | id: ObjectId   |
+| title: String  | <----------> | book: ObjectId | <----------> | name: String   |
+| author: String |              | user: ObjectId |              | email: String  |
+| category: Enum |              | date_emprunt:  |              | password: Hash |
+| copies: Number |              |   Date         |              | role: Enum     |
++----------------+              +----------------+              +----------------+
+          ^                             |                             ^
+          |                             |                             |
+          |                             |                             |
++----------------+              +----------------+              +----------------+
+|  BookController|              |EmpruntController|              |  UserController|
++----------------+              +----------------+              +----------------+
+| addBook()      |              | addEmprunt()   |              | register()     |
+| getBook()      |              | getEmprunt()   |              | login()        |
+| getBooks()     |              | returnBook()   |              | getUsers()     |
+| updateBook()   |              | getEmprunts()  |              | updateUser()   |
+| deleteBook()   |              |                |              | deleteUser()   |
++----------------+              +----------------+              +----------------+
+          ^                             |                             ^
+          |                             |                             |
+          |                             |                             |
++----------------+              +----------------+              +----------------+
+|   BookRoute    |              | EmpruntRoute   |              |   UserRoute    |
++----------------+              +----------------+              +----------------+
+| GET /books     | <---------> | GET /emprunts  | <---------> | GET /users     |
+| GET /books/:id | <---------> | POST /emprunts | <---------> | POST /register |
+| POST /books    | <---------> | PUT /emprunts  | <---------> | POST /login    |
+| PUT /books/:id | <---------> | GET /emprunts  | <---------> | PUT /users/:id |
+| DELETE /books  | <---------> | PUT /emprunts  |              | DELETE /users/:id|
++----------------+              +----------------+              +----------------+
+
+
+bibliotech/
+├── controllers/
+│   ├── authController.js
+│   ├── bookController.js
+│   ├── empruntController.js
+│   └── userController.js
+├── models/
+│   ├── bookModel.js
+│   ├── empruntModel.js
+│   └── userModel.js
+├── routes/
+│   ├── authRoute.js
+│   ├── bookRoute.js
+│   ├── empruntRoute.js
+│   └── userRoute.js
+├── middlewares/
+│   ├── authMiddleware.js
+│   └── errorMiddleware.js
+├── app.js
+├── config.js
+├── .env
+├── .env.example
+└── package.json

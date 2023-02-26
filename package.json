@@ -1,0 +1,27 @@
+{
+  "name": "bibliotech",
+  "version": "1.0.0",
+  "description": "back-end pour application de gestion de bibliotheque , avec gestion des users des employé des livres et des emprunts",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmiroucheTaleb/BiblioTech.git"
+  },
+  "author": "Taleb Amirouche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmiroucheTaleb/BiblioTech/issues"
+  },
+  "homepage": "https://github.com/AmiroucheTaleb/BiblioTech#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-validator": "^6.15.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.10.0"
+  }
+}
